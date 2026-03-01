@@ -49,7 +49,7 @@
   .tui-container {
     width: 100%;
     max-width: 1200px;
-    height: 90vh;
+    height: 72vh;
     border: 1px solid #D8D6D8;
     border-radius: 12px;
     display: flex;
@@ -73,12 +73,21 @@
   }
 
   .tui-margin {
-    position: absolute;
-    left: 4ch;
-    top: 4ch;
-    bottom: 4ch;
+    position: fixed;
+    left: calc((100vw - 1200px) / 2 + 4ch);
+    top: calc(14vh + 4ch);
+    bottom: calc(14vh + 4ch);
     width: 1ch;
     background-image: repeating-linear-gradient(to bottom, #D8D6D8 0, #D8D6D8 2px, transparent 2px, transparent 8px);
     opacity: 0.5;
+    pointer-events: none;
+    z-index: 30;
+  }
+
+  /* Adjust for small screens or when container is full width */
+  @media (max-width: 1200px) {
+    .tui-margin {
+      left: 4ch;
+    }
   }
 }

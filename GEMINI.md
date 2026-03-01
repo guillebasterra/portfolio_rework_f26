@@ -32,3 +32,14 @@
 - The website should feel like a single-page application (SPA). 
 - Clicking a link in the right column refreshes only the content in the left column.
 - Content should "pop" in instantly without smooth fades to maintain the terminal aesthetic.
+
+## 6. Component: ID Card Box
+- **Container:** A `div` with a 1px solid white border and a background of `#121212`.
+- **Drop Shadow:** Use a "hard" retro shadow (no blur). 
+  - Style: `box-shadow: 8px 8px 0px 0px rgba(255,255,255,0.2);` (or a slightly darker grey).
+- **Header:** - Text: "Hi I'm Guillermo"
+  - Style: Bold, uppercase, centered or left-aligned with a small `#` serial number in the top right corner (e.g., `#2044`).
+  - Separator: A horizontal 1px line below the header.
+- **Image Area:** - The profile photo should use a **CSS Dither filter** or a `1-bit` image processing style to look like retro pixel art.
+  - Border: The image itself should have a thin white frame.
+- **Footer Text:** Small, tightly leaded (line-height) text at the bottom of the card for "location" or "timestamp" metadata.
