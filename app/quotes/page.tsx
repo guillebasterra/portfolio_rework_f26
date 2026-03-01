@@ -23,21 +23,20 @@ const quotes = [
   },
 ];
 
-function QuoteCard({ quote, index }: { quote: typeof quotes[0], index: number }) {
+function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const charLimit = 200;
   const needsTruncation = quote.text.length > charLimit;
 
   const highlightText = (text: string, highlights: string[]) => {
     if (!highlights || highlights.length === 0) {
-      return text;
+      return <>{text}</>;
     }
 
     let result = text;
     const parts: { text: string; highlighted: boolean }[] = [];
     let lastIndex = 0;
 
-    // Sort highlights by their position in the text
     const sortedHighlights = [...highlights].sort((a, b) => {
       return text.indexOf(a) - text.indexOf(b);
     });
@@ -45,17 +44,14 @@ function QuoteCard({ quote, index }: { quote: typeof quotes[0], index: number })
     sortedHighlights.forEach((highlight) => {
       const index = result.indexOf(highlight, lastIndex);
       if (index !== -1) {
-        // Add text before highlight
         if (index > lastIndex) {
           parts.push({ text: result.substring(lastIndex, index), highlighted: false });
         }
-        // Add highlighted text
         parts.push({ text: highlight, highlighted: true });
         lastIndex = index + highlight.length;
       }
     });
 
-    // Add remaining text
     if (lastIndex < result.length) {
       parts.push({ text: result.substring(lastIndex), highlighted: false });
     }
@@ -64,7 +60,7 @@ function QuoteCard({ quote, index }: { quote: typeof quotes[0], index: number })
       <>
         {parts.map((part, i) => (
           part.highlighted ? (
-            <span key={i} className="bg-orange-100 text-orange-900 px-1 rounded">
+            <span key={i} className="bg-[#E0E0E0] text-[#121212]">
               {part.text}
             </span>
           ) : (
@@ -80,23 +76,20 @@ function QuoteCard({ quote, index }: { quote: typeof quotes[0], index: number })
     : quote.text;
 
   return (
-    <div className="border-l-2 border-gray-200 pl-6 py-2">
-      <p className="text-black text-lg mb-3 leading-relaxed">
+    <div className="border-l border-[#E0E0E0] pl-4 py-2">
+      <p className="mb-3 leading-relaxed">
         {highlightText(displayText, isExpanded || !needsTruncation ? quote.highlights : [])}
         {needsTruncation && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-sm text-gray-500 hover:text-gray-700 italic transition-colors ml-1"
+            className="ml-2 text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none px-1"
           >
-            {isExpanded ? 'Read less' : 'Read more'}
+            [{isExpanded ? 'read_less' : 'read_more'}]
           </button>
         )}
       </p>
-      <div className="text-gray-500 text-base">
-        <span className="font-medium">{quote.author}</span>
-        {quote.work && (
-          <span className="italic"> — {quote.work}</span>
-        )}
+      <div className="text-sm opacity-70">
+        -- {quote.author}{quote.work && `, ${quote.work}`}
       </div>
     </div>
   );
@@ -104,17 +97,12 @@ function QuoteCard({ quote, index }: { quote: typeof quotes[0], index: number })
 
 export default function Quotes() {
   return (
-    <div className="p-16 pt-16">
-      <div className="max-w-2xl">
-        <p className="text-gray-600 mb-12 text-lg leading-relaxed">
-          Some of my favorite quotes.
-        </p>
-
-        <div className="space-y-8">
-          {quotes.map((quote, index) => (
-            <QuoteCard key={index} quote={quote} index={index} />
-          ))}
-        </div>
+    <div className="space-y-6 max-w-3xl">
+      <h1 className="text-xl mb-8 font-bold"># quotes</h1>
+      <div className="space-y-8">
+        {quotes.map((quote, index) => (
+          <QuoteCard key={index} quote={quote} />
+        ))}
       </div>
     </div>
   );

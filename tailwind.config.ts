@@ -9,18 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        black: '#000000',
-        white: '#ffffff',
+        tui: {
+          bg: '#121212',
+          fg: '#D8D6D8',
+        }
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-      },
-      transitionDuration: {
-        '450': '450ms',
+        mono: ['var(--font-mono)', 'monospace'],
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;

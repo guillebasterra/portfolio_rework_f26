@@ -50,12 +50,12 @@ export async function getAllEssays(): Promise<EssayMeta[]> {
 
         return {
           slug: folder,
-          title: data.title || folder,
-          date: data.date || '',
-          updated: data.updated,
-          description: data.description || '',
+          title: String(data.title || folder),
+          date: String(data.date || ''),
+          updated: data.updated ? String(data.updated) : undefined,
+          description: String(data.description || ''),
           readingTime: stats.text,
-        };
+        } as EssayMeta;
       })
   );
 

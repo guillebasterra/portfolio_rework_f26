@@ -1,17 +1,18 @@
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen p-16 pt-16">
-      <div className="max-w-2xl">
-        <p className="text-lg mb-6 text-gray-600">Page not found</p>
-        <Link
-          href="/"
-          className="inline-block text-base text-gray-500 hover:text-black transition-colors"
-        >
-          ← Back to home
-        </Link>
-      </div>
+    <div className="space-y-6 max-w-3xl">
+      <h1 className="text-xl mb-8 font-bold"># 404_not_found</h1>
+      
+      <p className="opacity-70">The page you are looking for does not exist.</p>
+      
+      <Link
+        href="/"
+        className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none p-1 -ml-1 mt-4"
+      >
+        [ &lt;- back_to_home ]
+      </Link>
     </div>
   );
 }

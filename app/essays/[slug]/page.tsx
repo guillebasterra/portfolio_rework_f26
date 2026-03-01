@@ -1,7 +1,7 @@
 'use client';
 
 import { MDXRemote } from 'next-mdx-remote';
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
@@ -41,74 +41,42 @@ export default function EssayPage() {
 
   if (loading) {
     return (
-      <div className="p-6 md:p-12 flex items-center justify-center">
-        <p className="text-gray-600">Loading...</p>
+      <div className="space-y-6 max-w-3xl">
+        <p className="opacity-70">loading...</p>
       </div>
     );
   }
 
   if (!essay) {
     return (
-      <div className="p-6 md:p-12 flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-gray-600 mb-4">Essay not found</p>
-          <Link href="/essays" className="underline hover:text-gray-600">
-            ← Back to Essays
-          </Link>
-        </div>
+      <div className="space-y-6 max-w-3xl">
+        <p className="opacity-70">Essay not found</p>
+        <Link href="/essays" className="underline hover:bg-[#E0E0E0] hover:text-[#121212] transition-none">
+          [ &lt;- back_to_essays ]
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="p-16 pt-16">
-      <article className="max-w-2xl">
-        {/* Back Link */}
-        <Link
-          href="/essays"
-          className="inline-block text-sm text-gray-500 mb-12 hover:text-black transition-colors"
-        >
-          ← Back to Essays
-        </Link>
-
-        {/* Substack-style Header */}
-        <header className="mb-12 pb-8 border-b border-gray-200">
-          <h1 className="text-3xl md:text-4xl font-bold text-black mb-4 leading-tight">
-            {essay.title}
-          </h1>
-          <p className="text-lg text-gray-600 mb-6 font-normal">
-            {essay.description}
-          </p>
-          <div className="flex items-center gap-3 text-sm text-gray-500">
-            <time>
-              {new Date(essay.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-            <span>•</span>
-            <span>{essay.readingTime}</span>
-            {essay.updated && (
-              <>
-                <span>•</span>
-                <span>
-                  Updated {new Date(essay.updated).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </span>
-              </>
-            )}
-          </div>
-        </header>
-
-        {/* Essay Content with Substack-style Typography */}
-        <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-black prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-black prose-a:underline hover:prose-a:text-gray-600 prose-strong:text-black prose-blockquote:border-l-black prose-blockquote:text-gray-700 prose-blockquote:font-normal">
-          <MDXRemote {...essay.content} />
+    <article className="max-w-3xl space-y-8">
+      <Link href="/essays" className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none p-1 -ml-1">
+        [ &lt;- back_to_essays ]
+      </Link>
+      
+      <header className="space-y-4 border-b border-[#E0E0E0] pb-6">
+        <h1 className="text-2xl font-bold"># {essay.title}</h1>
+        <p className="opacity-90">{essay.description}</p>
+        <div className="flex items-center gap-3 text-sm opacity-70">
+          <time>{new Date(essay.date).toLocaleDateString('en-US')}</time>
+          <span>|</span>
+          <span>{essay.readingTime}</span>
         </div>
-      </article>
-    </div>
+      </header>
+      
+      <div className="prose prose-invert prose-p:text-[#E0E0E0] prose-headings:text-[#E0E0E0] prose-a:text-[#E0E0E0] prose-strong:text-[#E0E0E0] prose-code:text-[#E0E0E0] prose-pre:bg-[#1a1a1a] prose-pre:border prose-pre:border-[#E0E0E0] prose-blockquote:border-[#E0E0E0] prose-blockquote:text-[#E0E0E0] max-w-none font-mono">
+        <MDXRemote {...essay.content} />
+      </div>
+    </article>
   );
 }
