@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Links - Guillermo Basterra',
+  title: 'Resources - Guillermo Basterra',
   description: 'Get in touch with Guillermo Basterra',
 };
 
-export default function Links() {
+export default function Resources() {
   return (
     <div className="space-y-6 max-w-3xl">
-      <h1 className="text-xl mb-8 font-bold">Links</h1>
+      <h1 className="text-xl mb-8 font-bold">Resources</h1>
       
       <div className="space-y-4 leading-relaxed">
         <p>

@@ -53,30 +53,16 @@ export default function About() {
         </div>
 
         {/* Text Content Area */}
-        <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12">
+        <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12 lg:-mt-6">
           <p>
-            My name is Guillermo Basterra. Right now I'm a Computer Science student at USC. I am trying to figure out what I want to do with my life.
+            Hi, I'm Guillermo. I’m currently finishing my undergrad in Computer Science at USC. I have done work with applied LLMs, mainly simulating human behavior with Digital Twins and creating synthetic digital personas.
+
           </p>
 
-          <p>
-            Above all, I want to live courageously. And take risks. See and do great things. Do meaningful work. The first, at least, I can control.
-          </p>
-
-          <p>
-            I built this website for anyone who has any interest in figuring out who I am. I'll give a quick fire:
-          </p>
-
-          <ul className="list-disc list-inside space-y-2 ml-4">
-            <li>Born in Spain, to Spanish parents, moved around while growing up.</li>
-            <li>Favorite book: Zorba the Greek by Nikos Kazantzakis.</li>
-            <li>Hobbies: I play the guitar and sing, I like writing and want to be better at it, I read a lot, I play soccer (football, I should say), and I run (for fun, and the occasional marathon) and lift weights.</li>
-            <li>Interests: I have illusions of grandeur and wish to work on things that matter and will make the world a better place. I am dying to find this work and pour myself into it.</li>
-          </ul>
-
-          <p className="pt-4">
-            Now you know more about me feel free to explore this website.
-          </p>
-        </div>
+          <p>I was born in Spain and live in Los Angeles. For fun, I play the guitar, run and lift weights, read, and write the occasional essay.</p>
+          <p>I aim to live courageously, take risks, see and do great things. I want to do work that matters and will make the world a better place. I am dying to find this work and pour myself into it.</p>
+          <p>Feel free to explore this website. The resources page has a lot of useful links to my github, substack (same essays but with pictures), linkedin, and even goodreads if you are curious.</p>
+       </div>
       </div>
     </div>
   );
