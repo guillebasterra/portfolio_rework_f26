@@ -98,7 +98,7 @@ function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
 export default function Quotes() {
   return (
     <div className="space-y-6 max-w-3xl">
-      <h1 className="text-xl mb-8 font-bold"># quotes</h1>
+      <h1 className="text-xl mb-8 font-bold">Quotes</h1>
       <div className="space-y-8">
         {quotes.map((quote, index) => (
           <QuoteCard key={index} quote={quote} />

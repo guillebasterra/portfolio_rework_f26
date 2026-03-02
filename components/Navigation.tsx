@@ -10,7 +10,6 @@ export default function Navigation() {
     { href: '/', label: 'about' },
     { href: '/essays', label: 'essays' },
     { href: '/quotes', label: 'quotes' },
-    { href: '/portfolio', label: 'portfolio' },
     { href: '/resume', label: 'resume' },
     { href: '/links', label: 'links' },
   ];

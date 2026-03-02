@@ -3,26 +3,22 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className="max-w-4xl relative">
-      <div className="sticky top-0 z-20 h-0 overflow-visible">
-        <h1 className="text-xl font-bold bg-[#121212] inline-block pr-4 py-2"># about</h1>
+      <div className="sticky top-0 z-20 pt-1 pb-4 mb-4">
+        <h1 className="text-xl font-bold">About</h1>
       </div>
       
-      <div className="flex flex-col lg:flex-row gap-12 items-start relative pt-12">
-        {/* ID Card Section - Sticky */}
+      <div className="flex flex-col lg:flex-row gap-12 items-start relative pt-2">
+        {/* Simplified Wireframe ID Card Section */}
         <div className="lg:sticky lg:top-16 shrink-0 w-full max-w-[320px] z-10">
-          <div 
-            className="border-2 border-[#DCDCB4] bg-[#121212] p-4 relative"
-            style={{ boxShadow: '8px 8px 0px 0px rgba(220, 220, 180, 0.2)' }}
-          >
-            {/* ID Card Header */}
-            <div className="flex justify-between items-center mb-2 border-b-2 border-[#DCDCB4] pb-2">
-              <span className="font-bold uppercase text-sm tracking-tighter">hi i'm guillermo</span>
-              <span className="text-[10px] opacity-50 font-mono">#2044</span>
+          <div className="border border-[#DCDCB4] p-0 relative bg-[#121212] overflow-hidden" style={{ borderRadius: '0px' }}>
+            {/* Header */}
+            <div className="px-3 py-2 border-b border-[#DCDCB4] flex justify-between items-center">
+              <span className="font-bold text-xs tracking-[0.2em] uppercase">Guillermo Basterra</span>
             </div>
 
-            {/* ID Card Image Area */}
-            <div className="border-2 border-[#DCDCB4] p-1 mb-4 overflow-hidden bg-black">
-              <div className="relative aspect-[4/5] w-full filter grayscale contrast-[1.2] brightness-[1.1]">
+            {/* Microfiche Style Image Frame - No Border */}
+            <div className="p-4 pb-2">
+              <div className="relative aspect-[4/5] w-full filter grayscale contrast-[1.1] brightness-[1.05]">
                 <Image 
                   src="/my_photo.jpg" 
                   alt="Guillermo Basterra" 
@@ -35,21 +31,24 @@ export default function About() {
               </div>
             </div>
 
-            {/* ID Card Footer */}
-            <div className="text-[10px] leading-tight font-mono opacity-70">
-              <div className="flex justify-between">
-                <span>LOCATION:</span>
-                <span>LOS ANGELES, CA</span>
+            {/* Information Section */}
+            <div className="px-4 pb-6 pt-4 space-y-2">
+              <div className="text-[9px] font-mono opacity-60 uppercase tracking-[0.2em] flex gap-2">
+                <span className="opacity-40">Currently:</span>
+                <span className="font-bold">CS @ USC</span>
               </div>
-              <div className="flex justify-between">
-                <span>STATUS:</span>
-                <span>ACTIVE_STUDENT</span>
-              </div>
-              <div className="flex justify-between">
-                <span>TIMESTAMP:</span>
-                <span>{new Date().toISOString().split('T')[0]}</span>
+              <div className="text-[9px] font-mono opacity-60 uppercase tracking-[0.2em] flex gap-2">
+                <span className="opacity-40">Location:</span>
+                <span className="font-bold">Los Angeles</span>
               </div>
             </div>
+            
+            {/* Corner Accent Decor */}
+            <div className="absolute top-0 right-0 w-3 h-3 border-l border-b border-[#DCDCB4] opacity-20"></div>
+          </div>
+          
+          <div className="mt-4 text-[9px] font-mono opacity-30 text-center uppercase tracking-[0.3em]">
+            Microfiche Archive // B-2044
           </div>
         </div>
 

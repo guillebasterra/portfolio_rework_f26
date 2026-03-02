@@ -11,7 +11,7 @@ export default async function Essays() {
 
   return (
     <div className="space-y-6 max-w-3xl">
-      <h1 className="text-xl mb-8 font-bold"># essays</h1>
+      <h1 className="text-xl mb-8 font-bold">Essays</h1>
       
       {essays.length > 0 ? (
         <div className="space-y-4">

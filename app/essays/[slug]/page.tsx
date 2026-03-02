@@ -65,7 +65,7 @@ export default function EssayPage() {
       </Link>
       
       <header className="space-y-4 border-b-2 border-[#DCDCB4] pb-6">
-        <h1 className="text-2xl font-bold"># {essay.title}</h1>
+        <h1 className="text-2xl font-bold">{essay.title}</h1>
         <p className="opacity-90">{essay.description}</p>
         <div className="flex items-center gap-3 text-sm opacity-70">
           <time>{new Date(essay.date).toLocaleDateString('en-US')}</time>
