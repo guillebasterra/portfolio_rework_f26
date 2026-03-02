@@ -57,6 +57,15 @@
     overflow: hidden;
   }
 
+  @media (max-width: 768px) {
+    .tui-container {
+      height: 100vh;
+      border: none;
+      border-radius: 0;
+      flex-direction: column;
+    }
+  }
+
   .tui-left-pane {
     width: 82%;
     position: relative;
@@ -65,11 +74,24 @@
     display: flex;
   }
 
+  @media (max-width: 768px) {
+    .tui-left-pane {
+      width: 100%;
+      padding: 2ch 4ch;
+    }
+  }
+
   .tui-right-pane {
     width: 18%;
     border-left: 2px solid #DCDCB4;
-    padding: 2ch 1ch;
+    padding: 2ch 4px;
     overflow-y: auto;
+  }
+
+  @media (max-width: 768px) {
+    .tui-right-pane {
+      display: none;
+    }
   }
 
   .tui-margin {
@@ -84,8 +106,14 @@
     z-index: 30;
   }
 
+  @media (max-width: 768px) {
+    .tui-margin {
+      display: none;
+    }
+  }
+
   /* Adjust for small screens or when container is full width */
-  @media (max-width: 1200px) {
+  @media (max-width: 1200px) and (min-width: 769px) {
     .tui-margin {
       left: 4ch;
     }

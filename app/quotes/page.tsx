@@ -4,22 +4,22 @@ import { useState } from 'react';
 
 const quotes = [
   {
+    text: "This is true happiness: to have no ambition and to work like a horse as if you had every ambition. To live far from men, not to need them and yet to love them. To have the stars above, the land to your left and the sea to your right and to realize of a sudden that in your heart, life has accomplished its final miracle: it has become a fairy tale.",
+    author: "Nikos Kazantzakis",
+    work: "Zorba the Greek (my favorite book)",
+    highlights: ["the stars above, the land to your left and the sea to your right", "it has become a fairy tale"],
+  },
+  {
     text: "\"But I don't want comfort. I want God, I want poetry, I want real danger, I want freedom, I want goodness. I want sin.\" \"In fact,\" said Mustapha Mond, \"you're claiming the right to be unhappy.\" \"All right then,\" said the Savage defiantly, \"I'm claiming the right to be unhappy.\" \"Not to mention the right to grow old and ugly and impotent; the right to have syphilis and cancer; the right to have too little to eat; the right to be lousy; the right to live in constant apprehension of what may happen tomorrow; the right to catch typhoid; the right to be tortured by unspeakable pains of every kind.\" There was a long silence. \"I claim them all,\" said the Savage at last.",
     author: "Aldous Huxley",
     work: "Brave New World",
-    highlights: ["I'm claiming the right to be unhappy", "I claim them all"],
+    highlights: ["I don't want comfort. I want God, I want poetry, I want real danger, I want freedom, I want goodness. I want sin.","I'm claiming the right to be unhappy", "I claim them all"],
   },
   {
     text: "It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.",
     author: "Theodore Roosevelt",
     work: "The Man in the Arena",
-    highlights: ["The credit belongs to the man who is actually in the arena", "at least fails while daring greatly"],
-  },
-  {
-    text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    author: "Winston Churchill",
-    work: null,
-    highlights: ["it is the courage to continue that counts"],
+    highlights: ["The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood", "if he fails, at least fails while daring greatly"],
   },
 ];
 
@@ -60,7 +60,7 @@ function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
       <>
         {parts.map((part, i) => (
           part.highlighted ? (
-            <span key={i} className="bg-[#DCDCB4] text-[#121212]">
+            <span key={i} className="bg-[#DCDCB4]/15 text-[#DCDCB4]">
               {part.text}
             </span>
           ) : (
@@ -78,7 +78,7 @@ function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
   return (
     <div className="border-l-2 border-[#DCDCB4] pl-4 py-2">
       <p className="mb-3 leading-relaxed">
-        {highlightText(displayText, isExpanded || !needsTruncation ? quote.highlights : [])}
+        {highlightText(displayText, quote.highlights)}
         {needsTruncation && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}

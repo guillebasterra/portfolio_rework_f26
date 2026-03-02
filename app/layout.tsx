@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
+import MobileNav from '@/components/MobileNav';
 
 const jbMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -23,6 +24,8 @@ export default function RootLayout({
     <html lang="en" className={jbMono.variable}>
       <body className="bg-[#121212] text-[#DCDCB4]">
         <div className="tui-container">
+          <MobileNav />
+          
           {/* Left Pane (Content) */}
           <main className="tui-left-pane">
             <div className="tui-margin"></div>
@@ -32,7 +35,7 @@ export default function RootLayout({
           </main>
 
           {/* Right Pane (Nav) */}
-          <aside className="tui-right-pane">
+          <aside className="tui-right-pane hidden md:flex">
             <Navigation />
           </aside>
         </div>

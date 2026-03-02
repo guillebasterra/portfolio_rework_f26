@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className="max-w-4xl relative">
-      <div className="sticky top-0 z-20 pt-1 pb-4 mb-4">
+      <div className="pt-1 pb-4 mb-4">
         <h1 className="text-xl font-bold">About</h1>
       </div>
       
@@ -48,7 +48,7 @@ export default function About() {
           </div>
           
           <div className="mt-4 text-[9px] font-mono opacity-30 text-center uppercase tracking-[0.3em]">
-            Microfiche Archive // B-2044
+            Archive // B-2044
           </div>
         </div>
 
