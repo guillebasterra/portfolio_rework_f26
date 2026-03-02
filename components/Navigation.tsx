@@ -25,8 +25,8 @@ export default function Navigation() {
             href={link.href}
             className={`block w-full px-1 py-0.5 rounded-sm lowercase ${
               isActive 
-                ? 'text-[#D8D6D8] before:content-[">_"] before:mr-2' 
-                : 'text-[#D8D6D8] hover:bg-[#D8D6D8] hover:text-[#121212]'
+                ? 'text-[#DCDCB4] before:content-[">_"] before:mr-2' 
+                : 'text-[#DCDCB4] hover:bg-[#DCDCB4] hover:text-[#121212]'
             }`}
           >
             {link.label}

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={jbMono.variable}>
-      <body className="bg-[#121212] text-[#E0E0E0]">
+      <body className="bg-[#121212] text-[#DCDCB4]">
         <div className="tui-container">
           {/* Left Pane (Content) */}
           <main className="tui-left-pane">
@@ -37,21 +37,6 @@ export default function RootLayout({
           </aside>
         </div>
 
-        {/* Dithered Art Overlay - Keep as requested if possible, but let's hide it if it breaks the terminal aesthetic. For now, we'll keep it subtle or absolute */}
-        <div
-          className="fixed bottom-0 left-0 right-0 pointer-events-none z-[9999] opacity-20"
-          style={{
-            isolation: 'isolate',
-            transform: 'translateZ(0)',
-          }}
-        >
-          <img
-            src="/dithered-overlay.png"
-            alt=""
-            className="w-full block"
-            style={{ display: 'block', margin: 0, padding: 0, verticalAlign: 'bottom' }}
-          />
-        </div>
       </body>
     </html>
   );

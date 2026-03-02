@@ -5,12 +5,12 @@
 @layer base {
   :root {
     --bg-color: #121212;
-    --text-color: #D8D6D8;
-    --border-color: #D8D6D8;
+    --text-color: #DCDCB4;
+    --border-color: #DCDCB4;
   }
 
   body {
-    @apply bg-[#121212] text-[#D8D6D8] font-mono selection:bg-[#D8D6D8] selection:text-[#121212];
+    @apply bg-[#121212] text-[#DCDCB4] font-mono selection:bg-[#DCDCB4] selection:text-[#121212];
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -28,11 +28,11 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D8D6D8;
+    background: #DCDCB4;
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: #D8D6D8 transparent;
+    scrollbar-color: #DCDCB4 transparent;
   }
 
   /* Typography */
@@ -41,7 +41,7 @@
   }
   
   a {
-    @apply text-[#D8D6D8] hover:text-[#121212] hover:bg-[#D8D6D8] transition-none;
+    @apply text-[#DCDCB4] hover:text-[#121212] hover:bg-[#DCDCB4] transition-none;
   }
 }
 
@@ -50,8 +50,8 @@
     width: 100%;
     max-width: 1200px;
     height: 72vh;
-    border: 1px solid #D8D6D8;
-    border-radius: 12px;
+    border: 2px solid #DCDCB4;
+    border-radius: 8px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -67,7 +67,7 @@
 
   .tui-right-pane {
     width: 18%;
-    border-left: 1px solid #D8D6D8;
+    border-left: 2px solid #DCDCB4;
     padding: 2ch 1ch;
     overflow-y: auto;
   }
@@ -78,7 +78,7 @@
     top: calc(14vh + 4ch);
     bottom: calc(14vh + 4ch);
     width: 1ch;
-    background-image: repeating-linear-gradient(to bottom, #D8D6D8 0, #D8D6D8 2px, transparent 2px, transparent 8px);
+    background-image: repeating-linear-gradient(to bottom, #DCDCB4 0, #DCDCB4 2px, transparent 2px, transparent 8px);
     opacity: 0.5;
     pointer-events: none;
     z-index: 30;

@@ -19,7 +19,7 @@ export default async function Essays() {
             <Link
               key={essay.slug}
               href={`/essays/${essay.slug}`}
-              className="group flex gap-4 items-baseline hover:bg-[#E0E0E0] hover:text-[#121212] transition-none p-1 -ml-1"
+              className="group flex gap-4 items-baseline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none p-1 -ml-1"
             >
               <time className="opacity-70 text-sm shrink-0 whitespace-nowrap">
                 [{new Date(essay.date).getFullYear()}]

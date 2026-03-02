@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         tui: {
           bg: '#121212',
-          fg: '#D8D6D8',
+          fg: '#DCDCB4',
         }
       },
       fontFamily: {

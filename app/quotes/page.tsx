@@ -60,7 +60,7 @@ function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
       <>
         {parts.map((part, i) => (
           part.highlighted ? (
-            <span key={i} className="bg-[#E0E0E0] text-[#121212]">
+            <span key={i} className="bg-[#DCDCB4] text-[#121212]">
               {part.text}
             </span>
           ) : (
@@ -76,13 +76,13 @@ function QuoteCard({ quote }: { quote: typeof quotes[0] }) {
     : quote.text;
 
   return (
-    <div className="border-l border-[#E0E0E0] pl-4 py-2">
+    <div className="border-l-2 border-[#DCDCB4] pl-4 py-2">
       <p className="mb-3 leading-relaxed">
         {highlightText(displayText, isExpanded || !needsTruncation ? quote.highlights : [])}
         {needsTruncation && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="ml-2 text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none px-1"
+            className="ml-2 text-sm opacity-70 hover:opacity-100 hover:bg-[#DCDCB4] hover:text-[#121212] transition-none px-1"
           >
             [{isExpanded ? 'read_less' : 'read_more'}]
           </button>

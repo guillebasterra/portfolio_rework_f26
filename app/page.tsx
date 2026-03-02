@@ -11,17 +11,17 @@ export default function About() {
         {/* ID Card Section - Sticky */}
         <div className="lg:sticky lg:top-16 shrink-0 w-full max-w-[320px] z-10">
           <div 
-            className="border border-[#D8D6D8] bg-[#121212] p-4 relative"
-            style={{ boxShadow: '8px 8px 0px 0px rgba(216, 214, 216, 0.2)' }}
+            className="border-2 border-[#DCDCB4] bg-[#121212] p-4 relative"
+            style={{ boxShadow: '8px 8px 0px 0px rgba(220, 220, 180, 0.2)' }}
           >
             {/* ID Card Header */}
-            <div className="flex justify-between items-center mb-2 border-b border-[#D8D6D8] pb-2">
+            <div className="flex justify-between items-center mb-2 border-b-2 border-[#DCDCB4] pb-2">
               <span className="font-bold uppercase text-sm tracking-tighter">hi i'm guillermo</span>
               <span className="text-[10px] opacity-50 font-mono">#2044</span>
             </div>
 
             {/* ID Card Image Area */}
-            <div className="border border-[#D8D6D8] p-1 mb-4 overflow-hidden bg-black">
+            <div className="border-2 border-[#DCDCB4] p-1 mb-4 overflow-hidden bg-black">
               <div className="relative aspect-[4/5] w-full filter grayscale contrast-[1.2] brightness-[1.1]">
                 <Image 
                   src="/my_photo.jpg" 
@@ -54,7 +54,7 @@ export default function About() {
         </div>
 
         {/* Text Content Area */}
-        <div className="space-y-4 text-[#D8D6D8] leading-relaxed flex-grow pb-12">
+        <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12">
           <p>
             My name is Guillermo Basterra. Right now I'm a Computer Science student at USC. I am trying to figure out what I want to do with my life.
           </p>

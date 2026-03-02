@@ -2,17 +2,17 @@
 
 ## 1. Global Styles
 - **Background Color:** `#121212` (Matte Black)
-- **Primary Text Color:** `#E0E0E0` (Off-White)
-- **Border/Line Color:** `#E0E0E0` (1px solid)
+- **Primary Text Color:** `#DCDCB4` (Yellowish Off-White)
+- **Border/Line Color:** `#DCDCB4` (2px solid)
 - **Font:** Monospace (e.g., 'JetBrains Mono', 'Fira Code', or 'Courier New')
 - **Casing:** Strictly lowercase for navigation and headers.
-- **Scrolling:** Overflow content must be scrollable *within* the left pane only. Scrollbars must be hidden or styled as thin 1px lines.
+- **Scrolling:** Overflow content must be scrollable *within* the left pane only. Scrollbars must be hidden or styled as thin 2px lines.
 
 ## 2. Layout Structure
-- **Container:** A centered flex/grid box with a 1px solid white border.
+- **Container:** A centered flex/grid box with a 2px solid yellowish off-white border and 8px border-radius.
 - **Split:** - **Left Pane (Content):** 75% width.
   - **Right Pane (Nav):** 25% width.
-- **Divider:** A 1px vertical white line separating the two panes.
+- **Divider:** A 2px vertical yellowish off-white line separating the two panes.
 
 ## 3. Right Column (Navigation)
 - **Items:** about, essays, quotes, portfolio, resume, links.
@@ -20,7 +20,7 @@
 - **States:**
   - **Default:** Plain text.
   - **Active/Current:** Prefixed with a `> ` character (e.g., `> about`).
-  - **Hover/Focus:** The entire line background turns `#E0E0E0` and text color turns `#121212`. The selection block must span the full width of the sidebar minus 1px padding.
+  - **Hover/Focus:** The entire line background turns `#DCDCB4` and text color turns `#121212`. The selection block must span the full width of the sidebar minus 2px padding.
 
 ## 4. Left Column (Content Area)
 - **Margin Decoration:** A vertical line of dots (Braille pattern `.` or `:`) running top-to-bottom on the far-left edge (approx. 2ch from border).
@@ -34,12 +34,12 @@
 - Content should "pop" in instantly without smooth fades to maintain the terminal aesthetic.
 
 ## 6. Component: ID Card Box
-- **Container:** A `div` with a 1px solid white border and a background of `#121212`.
+- **Container:** A `div` with a 2px solid yellowish off-white border, 8px border-radius, and a background of `#121212`.
 - **Drop Shadow:** Use a "hard" retro shadow (no blur). 
-  - Style: `box-shadow: 8px 8px 0px 0px rgba(255,255,255,0.2);` (or a slightly darker grey).
+  - Style: `box-shadow: 8px 8px 0px 0px rgba(220, 220, 180, 0.2);`
 - **Header:** - Text: "Hi I'm Guillermo"
   - Style: Bold, uppercase, centered or left-aligned with a small `#` serial number in the top right corner (e.g., `#2044`).
-  - Separator: A horizontal 1px line below the header.
+  - Separator: A horizontal 2px line below the header.
 - **Image Area:** - The profile photo should use a **CSS Dither filter** or a `1-bit` image processing style to look like retro pixel art.
-  - Border: The image itself should have a thin white frame.
+  - Border: The image itself should have a thin yellowish off-white frame.
 - **Footer Text:** Small, tightly leaded (line-height) text at the bottom of the card for "location" or "timestamp" metadata.

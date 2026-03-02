@@ -26,7 +26,7 @@ export default function Portfolio() {
 
       <div className="space-y-12">
         {projects.map((project) => (
-          <article key={project.slug} className="space-y-3 border-t border-[#E0E0E0] pt-6 first:border-t-0 first:pt-0">
+          <article key={project.slug} className="space-y-3 border-t-2 border-[#DCDCB4] pt-6 first:border-t-0 first:pt-0">
             <div className="flex items-baseline justify-between gap-4">
               <h2 className="text-lg font-bold">{project.title}</h2>
               <time className="text-sm opacity-70 whitespace-nowrap">[{project.date}]</time>
@@ -36,12 +36,12 @@ export default function Portfolio() {
 
             <div className="flex gap-4 pt-2">
               {project.links.live && (
-                <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#E0E0E0] hover:text-[#121212] transition-none">
+                <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none">
                   [ live_site ]
                 </a>
               )}
               {project.links.github && (
-                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#E0E0E0] hover:text-[#121212] transition-none">
+                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none">
                   [ github ]
                 </a>
               )}

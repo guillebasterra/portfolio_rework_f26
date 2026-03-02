@@ -51,7 +51,7 @@ export default function EssayPage() {
     return (
       <div className="space-y-6 max-w-3xl">
         <p className="opacity-70">Essay not found</p>
-        <Link href="/essays" className="underline hover:bg-[#E0E0E0] hover:text-[#121212] transition-none">
+        <Link href="/essays" className="underline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none">
           [ &lt;- back_to_essays ]
         </Link>
       </div>
@@ -60,11 +60,11 @@ export default function EssayPage() {
 
   return (
     <article className="max-w-3xl space-y-8">
-      <Link href="/essays" className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none p-1 -ml-1">
+      <Link href="/essays" className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#DCDCB4] hover:text-[#121212] transition-none p-1 -ml-1">
         [ &lt;- back_to_essays ]
       </Link>
       
-      <header className="space-y-4 border-b border-[#E0E0E0] pb-6">
+      <header className="space-y-4 border-b-2 border-[#DCDCB4] pb-6">
         <h1 className="text-2xl font-bold"># {essay.title}</h1>
         <p className="opacity-90">{essay.description}</p>
         <div className="flex items-center gap-3 text-sm opacity-70">
@@ -74,7 +74,7 @@ export default function EssayPage() {
         </div>
       </header>
       
-      <div className="prose prose-invert prose-p:text-[#E0E0E0] prose-headings:text-[#E0E0E0] prose-a:text-[#E0E0E0] prose-strong:text-[#E0E0E0] prose-code:text-[#E0E0E0] prose-pre:bg-[#1a1a1a] prose-pre:border prose-pre:border-[#E0E0E0] prose-blockquote:border-[#E0E0E0] prose-blockquote:text-[#E0E0E0] max-w-none font-mono">
+      <div className="prose prose-invert prose-p:text-[#DCDCB4] prose-headings:text-[#DCDCB4] prose-a:text-[#DCDCB4] prose-strong:text-[#DCDCB4] prose-code:text-[#DCDCB4] prose-pre:bg-[#1a1a1a] prose-pre:border-2 prose-pre:border-[#DCDCB4] prose-blockquote:border-[#DCDCB4] prose-blockquote:border-l-4 prose-blockquote:text-[#DCDCB4] max-w-none font-mono">
         <MDXRemote {...essay.content} />
       </div>
     </article>

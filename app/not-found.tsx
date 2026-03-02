@@ -9,7 +9,7 @@ export default function NotFound() {
       
       <Link
         href="/"
-        className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#E0E0E0] hover:text-[#121212] transition-none p-1 -ml-1 mt-4"
+        className="inline-block text-sm opacity-70 hover:opacity-100 hover:bg-[#DCDCB4] hover:text-[#121212] transition-none p-1 -ml-1 mt-4"
       >
         [ &lt;- back_to_home ]
       </Link>
