@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -55,13 +56,13 @@ export default function About() {
         {/* Text Content Area */}
         <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12 lg:-mt-6">
           <p>
-            Hi, I'm Guillermo. I’m currently finishing my undergrad in Computer Science at USC. I have done work with applied LLMs, mainly simulating human behavior with Digital Twins and creating synthetic digital personas.
+            Hi, I'm Guillermo. I’m an undergraduate Computer Science at USC. My work up until now has focused on applied LLMs, simulating human behavior with Digital Twins and synthetic personas.
 
           </p>
 
-          <p>I was born in Spain and live in Los Angeles. For fun, I play the guitar, run and lift weights, read, and write the occasional essay.</p>
-          <p>I aim to live courageously, take risks, see and do great things. I want to do work that matters and will make the world a better place. I am dying to find this work and pour myself into it.</p>
-          <p>Feel free to explore this website. The resources page has a lot of useful links to my github, substack (same essays but with pictures), linkedin, and even goodreads if you are curious.</p>
+          <p>I was born in Spain and live in Los Angeles. I like to play the guitar, run and lift weights, read, write, and spend time in the great outdoors.</p>
+          <p>Right now I am interested in climate tech, hard tech, and computational cognition. Above all I want to live courageously, take risks, experience all that I can, and do work that will make this world a better place.</p>
+          <p>Check out the <Link href="/resources" className="underline decoration-1 underline-offset-2 hover:bg-[#DCDCB4] hover:text-[#121212]">resources</Link> page for links to my GitHub, LinkedIn, Substack, and even my Goodreads if you are curious.</p>
        </div>
       </div>
     </div>
