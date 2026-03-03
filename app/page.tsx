@@ -54,7 +54,7 @@ export default function About() {
         </div>
 
         {/* Text Content Area */}
-        <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12 lg:-mt-6">
+        <div className="space-y-4 text-[#DCDCB4] leading-relaxed flex-grow pb-12">
           <p>
             Hi, I'm Guillermo. I’m an undergraduate Computer Science at USC. My work up until now has focused on applied LLMs, simulating human behavior with Digital Twins and synthetic personas.
 
