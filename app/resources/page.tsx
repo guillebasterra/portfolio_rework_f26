@@ -17,8 +17,8 @@ export default function Resources() {
         </p>
         <p>
           Or DM me on X:{' '}
-          <a href="https://x.com/willybasterra" target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none">
-            @willybasterra
+          <a href="https://x.com/basterra" target="_blank" rel="noopener noreferrer" className="underline hover:bg-[#DCDCB4] hover:text-[#121212] transition-none">
+            @basterra
           </a>
         </p>
 
